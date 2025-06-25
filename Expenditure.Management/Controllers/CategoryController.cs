@@ -14,6 +14,9 @@ namespace Expenditure.Management.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.ButtonTitle = "Create Category";
+            ViewBag.Controller = "Category";
+            ViewBag.Action = nameof(Create);
             return View(_categoryService.GetCategories());
         }
 
