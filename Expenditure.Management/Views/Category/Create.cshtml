@@ -1,0 +1,44 @@
+﻿@model CategoryAddRequest
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Create Category";
+    ViewBag.Controller = "Category";
+    ViewBag.Action = "Index";
+    ViewBag.ButtonTitle = "Back to List";
+}
+
+
+@await Html.PartialAsync("_CategoryForm",Model)
+
+@* <div class="row">
+    
+    <div class="col-md-7">
+        <div class="widget p-5">
+            <form method="post" asp-action="Create">
+                <div class="mb-3">
+                    <div class='e-btn-group custom-rbt-group'>
+                        <input type="radio" id="radioleft" name="Type" value="Expense" checked="@(Model.Type == "Expense")" />
+                        <label class="e-btn" for="radioleft">Expense</label>
+                        <input type="radio" id="radiomiddle" name="Type" value="Income" checked="@(Model.Type == "Income")" />
+                        <label class="e-btn" for="radiomiddle">Income</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <ejs-textbox placeholder="Title" ejs-for="Title" floatLabelType="Always"></ejs-textbox>
+                </div>
+                <div class="mb-3">
+                    <ejs-textbox placeholder="Icon" ejs-for="Icon" floatLabelType="Always"></ejs-textbox>
+                </div>
+
+                <ejs-button id="successbtn" cssClass="e-success" content="Success"></ejs-button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="widget h-100 d-flex justify-content-center align-items-center" style="background-color:#212b36">
+            <i class="fa-solid fa-shapes fa-2xl"></i>
+        </div>
+    </div>
+</div> *@

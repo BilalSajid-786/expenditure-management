@@ -1,0 +1,12 @@
+﻿@model CategoryUpdate
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Update Category";
+    ViewBag.Controller = "Category";
+    ViewBag.Action = "Index";
+    ViewBag.ButtonTitle = "Back to List";
+}
+
+@await Html.PartialAsync("_CategoryForm",Model)
