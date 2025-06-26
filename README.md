@@ -1,31 +1,17 @@
-# expenditure-management
+# 💰 Expenditure Management System
 
-An ASP.NET MVC web application for managing personal or business expenditures. Built using **Entity Framework Core**, **xUnit**, **Moq**, and a clean **N-Layer architecture** to ensure testability, maintainability, and scalability.
-
----
-
-## 🚀 Features
-
-- 🔐 **User-friendly UI** (MVC pattern)
-- 🧾 **Category & Transaction management**
-- 💾 **EF Core** as ORM
-- 🧪 **Unit testing** with xUnit and Moq
-- 📁 Follows **N-Layer Architecture**:
-  - Presentation Layer (MVC)
-  - Business Layer (Services)
-  - Data Access Layer (Repositories)
-  - Entity Layer (Models)
+An ASP.NET Core MVC web application to manage personal or organizational expenditures by tracking **categories** and **transactions**.
 
 ---
 
-## 🏗️ Technologies Used
+## 🏗️ Tech Stack
 
-- ASP.NET MVC (.NET 6+)
-- Entity Framework Core
-- SQL Server (or any configured DB)
-- xUnit (Unit Testing Framework)
-- Moq (Mocking Framework)
-- AutoMapper (if used)
-- Git + GitHub
+- **ASP.NET Core MVC**
+- **Entity Framework Core (EF Core)** – ORM
+- **SQL Server** – Database
+- **N-Layer Architecture** – Clean separation of concerns
+- **xUnit** – Unit testing framework
+- **AutoFixture** – Test data generation
+- **Moq** – Mocking dependencies
 
 ---
