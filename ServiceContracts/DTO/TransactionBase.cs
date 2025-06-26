@@ -12,10 +12,12 @@ namespace Expenditure.ServiceContracts.DTO
         [Required]
         public int CategoryId { get; set; }
 
+        public List<CategoryResponse>? Categories { get; set; }
+
         [Required]
         public int? Amount { get; set; }
 
         public string? Note { get; set; }
-        public DateTime Date { get; set; } = DateTime.Now;
+        public DateTime TransactionDate { get; set; } = DateTime.Now;
     }
 }

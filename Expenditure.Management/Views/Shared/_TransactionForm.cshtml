@@ -1,0 +1,47 @@
+﻿@model TransactionBase
+@{
+    ViewBag.Title = ViewBag.Action;
+    int TransactionId = 0;
+    if (Model is TransactionUpdate transactionUpdate)
+    {
+        TransactionId = transactionUpdate.TransactionId;
+    }
+}
+
+<div class="row">
+    <div class="col-md-7">
+        <div class="widget p-5">
+            <form method="post" asp-action="@ViewBag.Action" asp-controller="@ViewBag.Controller">
+                @if (Model is TransactionUpdate transaction)
+                {
+                    <input type="hidden" asp-for="@TransactionId" />
+                }
+                <ejs-datetimepicker id="date" ejs-for="TransactionDate"
+                                    placeholder="Transaction Date" floatLabelType="Always" format="MMM-dd-yy"></ejs-datetimepicker>
+                <div class="mt-3">
+                    <ejs-dropdownlist id="categoryId" dataSource="@ViewBag.Categories"
+                                      ejs-for="CategoryId" placeholder="Select Category"
+                                      floatLabelType="Always">
+                        <e-dropdownlist-fields value="CategoryId" text="Title"></e-dropdownlist-fields>
+                    </ejs-dropdownlist>
+                </div>
+
+                <div class="mt-3">
+                    <ejs-numerictextbox id="amount" Type="text" placeholder="Amount" floatLabelType="Always"
+                    ejs-for="Amount"></ejs-numerictextbox>
+                </div>
+
+                <div class="mt-3">
+                    <ejs-textbox placeholder="Note" ejs-for="Note" floatLabelType="Always"></ejs-textbox>
+                </div>
+
+                <ejs-button id="successbtn" cssClass="e-success" content="@ViewBag.Action"></ejs-button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="widget h-100 d-flex justify-content-center align-items-center" style="background-color:#212b36">
+            <i class="fa-solid fa-money-bill-transfer fa-2xl"></i>
+        </div>
+    </div>
+</div>

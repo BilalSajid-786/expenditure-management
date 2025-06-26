@@ -18,6 +18,7 @@ namespace Expenditure.ServiceContracts.Extensions
                 Amount = transaction.Amount,
                 Note = transaction.Note,
                 CategoryId = transaction.CategoryId,
+                Category = transaction?.Category?.Title + " " + transaction?.Category?.Icon,
                 Date = transaction.Date,
                 TransactionId = transaction.TransactionId,
             };
@@ -33,7 +34,7 @@ namespace Expenditure.ServiceContracts.Extensions
                 Amount = transactionBase.Amount ?? 0,
                 Note = transactionBase.Note,
                 CategoryId = transactionBase.CategoryId,
-                Date = transactionBase.Date,
+                Date = transactionBase.TransactionDate,
                 TransactionId = transactionId ?? 0
             };
         }

@@ -26,7 +26,7 @@ namespace Expenditure.Repository
 
         public async Task<IEnumerable<Transaction>> GetAllTransactionAsync()
         {
-            return await _context.Transactions.ToListAsync();
+            return await _context.Transactions.Include(t => t.Category).ToListAsync();
         }
 
         public async Task<IEnumerable<Transaction>> GetAllTransactionsByCategoryAsync(int categoryId)

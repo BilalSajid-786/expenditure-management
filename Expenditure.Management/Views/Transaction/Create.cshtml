@@ -1,0 +1,8 @@
+﻿@model TransactionAddRequest
+@{
+    ViewBag.Title = "Create Transaction";
+    ViewBag.Action = "Create";
+    ViewBag.Controller = "Transaction";
+}
+
+@await Html.PartialAsync("_TransactionForm",Model)

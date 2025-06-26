@@ -1,0 +1,29 @@
+﻿@model IEnumerable<TransactionResponse>
+@{
+    ViewBag.Title = "Transactions";
+}
+
+
+<div class="row">
+    <div class="col-md-7">
+        <div class="widget p-5">
+            <ejs-grid id="transactions" dataSource="@Model" gridLines="None" allowSorting="true"
+                      allowPaging="true">
+                <e-grid-pagesettings pageSize="5"></e-grid-pagesettings>
+                <e-grid-columns>
+                    <e-grid-column field="TransactionId" headerText="Transaction Id"></e-grid-column>
+                    <e-grid-column field="Category" headerText="Category"></e-grid-column>
+                    <e-grid-column field="Amount" headerText="Amount"></e-grid-column>
+                    <e-grid-column field="Note" headerText="Note"></e-grid-column>
+                    <e-grid-column field="Date" headerText="Transaction Date" format="yMd"></e-grid-column>
+                    
+                </e-grid-columns>
+            </ejs-grid>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="widget h-100 d-flex justify-content-center align-items-center" style="background-color:#212b36">
+            <i class="fa-solid fa-shapes fa-2xl"></i>
+        </div>
+    </div>
+</div>

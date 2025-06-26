@@ -18,7 +18,7 @@ namespace Expenditure.ServiceContracts.DTO
                 CategoryId = this.CategoryId,
                 Amount = this.Amount ?? 0,
                 Note = this.Note,
-                Date = this.Date,
+                Date = this.TransactionDate,
             };
         }
     }
